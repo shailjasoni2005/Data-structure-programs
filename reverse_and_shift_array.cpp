@@ -99,6 +99,30 @@ public:
             Swap(i,j);
         }
     }
+
+    
+// shift and rotation
+
+// Left shift:----
+
+    void LeftShift(){
+        for(int i=0;i<length-1;i++){
+            A[i]=A[i+1];
+        }
+        A[length-1]=0;
+    }
+
+    void LeftRotation(){
+        int num=A[0];
+        for(int i=0;i<length-1;i++){
+            A[i]=A[i+1];
+        }
+        
+         A[length-1]=num;
+    }
+
+    // similarly we can perform right rotation.
+
 };
 
 int main(){
@@ -112,11 +136,13 @@ int main(){
     // cout<<array.Sum()<<endl;
     // cout<<array.Average()<<endl;
     // array.Reverse();
-    array.Reverse2();
-    array.Display();
+    // array.Reverse2();
 
+    // array.LeftShift();
+    array.LeftRotation();
+    array.Display();
 
     return 0;
 }
 
-// shift and rotation
+
